@@ -1,0 +1,7 @@
+15:33:47.334 [main] INFO  lezione_6.Class_main - ciao
+15:33:47.337 [main] DEBUG lezione_6.Class_main - ciao
+15:33:47.337 [main] WARN  lezione_6.Class_main - ciao
+15:33:47.338 [main] ERROR lezione_6.Class_main - errore
+16:42:56.972 [main] DEBUG lezione_6.Class_main - Hai inserito un input non valido!
+16:43:05.865 [main] DEBUG lezione_6.Class_main - Hai inserito un input non valido!
+16:43:32.945 [main] DEBUG lezione_6.Class_main - La posizione inserita non esiste
