@@ -37,6 +37,8 @@ public class Class_main {
 				log.debug("Bho");
 			}
 		}
-	}
+		public static void testMap() {
+	}	
+	
 }
 
