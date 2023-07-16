@@ -45,8 +45,8 @@ public class gestionale {
 	
 	public List<articoloGenerico> ricercaPerAutore(String autore) {
 		return archivio.values().stream()
-				.filter(e -> e instanceof libro)
-				.map(e -> (libro) e)
+				.filter(e -> e instanceof ElementoCatalogo)
+				.map(e -> (ElementoCatalogo) e)
 				.filter(e -> autore.equals(e.getAutore()))
 				.collect(Collectors.toList());
 	}
@@ -57,8 +57,8 @@ public class gestionale {
 			if(txt.length() != 0) {
 				txt += "#";
 			}
-			if(articolo instanceof libro) {
-				txt += libro.toStringFile((libro)articolo);
+			if(articolo instanceof ElementoCatalogo) {
+				txt += ElementoCatalogo.toStringFile((ElementoCatalogo)articolo);
 			} else if(articolo instanceof rivista) {
 				txt += rivista.toStringFile((rivista) articolo);
 			}
@@ -82,8 +82,8 @@ public class gestionale {
 
 		for (String curString : arraySplittato) {
 			articoloGenerico elemento = null;
-			if ( curString.startsWith(libro.class.getSimpleName()) ) {
-				elemento = libro.fromStringFile(curString);
+			if ( curString.startsWith(ElementoCatalogo.class.getSimpleName()) ) {
+				elemento = ElementoCatalogo.fromStringFile(curString);
 			} else if ( curString.startsWith(rivista.class.getSimpleName()) ) {
 				elemento= rivista.fromStringFile(curString);
 			}
@@ -104,8 +104,8 @@ public class gestionale {
 		
 		gestionale catalogo = new gestionale();
 		
-		libro l1 = new libro("A01", "Il silenzio degli innocenti", 1991, 388 , "Thomas Harris", "Crime");
-		libro l2 = new libro("A02", "50 sfumature di grigio", 2001, 523, "E. L. James", "Romanzo");
+		ElementoCatalogo l1 = new ElementoCatalogo("A01", "Il silenzio degli innocenti", 1991, 388 , "Thomas Harris", "Crime");
+		ElementoCatalogo l2 = new ElementoCatalogo("A02", "50 sfumature di grigio", 2001, 523, "E. L. James", "Romanzo");
 		rivista r1 = new rivista("A04", "Vanity Fair", 2023, 45, Periodicita.MENSILE);
 		rivista r2 = new rivista("A05", "Gazzetta dello sport", 2023, 13, Periodicita.SETTIMANALE);
 		
