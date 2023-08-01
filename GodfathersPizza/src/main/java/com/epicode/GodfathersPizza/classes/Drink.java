@@ -16,5 +16,5 @@ public class Drink {
 	public String getMenuLine() {
 		return this.name + " - caloreis: " + this.calories + " - price: " + this.price;  
 	}
-
+	
 }
